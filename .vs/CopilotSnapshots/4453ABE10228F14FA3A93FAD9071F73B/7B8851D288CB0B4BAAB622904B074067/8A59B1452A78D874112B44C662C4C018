@@ -1,0 +1,23 @@
+﻿using ExploracionSubmarinaApp.Repositories;
+
+namespace ExploracionSubmarinaApp
+{
+    public partial class tabPrincipal : Form
+    {
+        private readonly CatalogoRepository _catalogoRepository = new();
+        private readonly ExpedicionRepository _expedicionRepository = new();
+        private readonly InformeRepository _informeRepository = new();
+
+        private int? _idSeleccionado;
+
+        public tabPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        private void tabPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

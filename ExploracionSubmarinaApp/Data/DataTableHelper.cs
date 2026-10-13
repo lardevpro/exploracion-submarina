@@ -10,10 +10,7 @@ public static class DataTableHelper
         DataTable tabla = new DataTable();
         for (int i = 0; i < lector.FieldCount; i++)
         {
-            tabla.Columns.Add(
-            lector.GetName(i),
-            lector.GetFieldType(i)
-            );
+            tabla.Columns.Add(lector.GetName(i),lector.GetFieldType(i));
         }
         while (await lector.ReadAsync())
         {

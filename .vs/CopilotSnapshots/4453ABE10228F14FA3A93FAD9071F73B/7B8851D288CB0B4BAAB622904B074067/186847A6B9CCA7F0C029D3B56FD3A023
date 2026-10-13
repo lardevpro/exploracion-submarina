@@ -1,0 +1,20 @@
+﻿using ExploracionSubmarinaApp.Repositories;
+
+namespace ExploracionSubmarinaApp.Forms
+{
+    public partial class MainForm : Form
+    {
+        private readonly CatalogoRepository _catalogoRepository = new();
+        private readonly ExpedicionRepository _expedicionRepository = new();
+        private readonly InformeRepository _informeRepository = new();
+
+        private int? _idSeleccionado;
+
+        
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

@@ -1,5 +1,4 @@
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.csproj.AssemblyReference.cache
-C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.tabPrincipal.resources
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.csproj.GenerateResource.cache
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.AssemblyInfoInputs.cache
@@ -28,3 +27,4 @@ C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionS
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.pdb
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.genruntimeconfig.cache
 C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ref\ExploracionSubmarinaApp.dll
+C:\Users\Reserva6\Desktop\Nueva carpeta (2)\ExploracionSubmarinaApp\ExploracionSubmarinaApp\obj\Debug\net10.0-windows\ExploracionSubmarinaApp.Form1.resources

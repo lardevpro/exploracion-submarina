@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExploracionSubmarinaApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df41d1472c78ad15b6c87f0ec94660a958ad02b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExploracionSubmarinaApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExploracionSubmarinaApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

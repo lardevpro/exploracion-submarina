@@ -1,6 +1,6 @@
-﻿namespace ExploracionSubmarinaApp
+﻿namespace ExploracionSubmarinaApp.Forms
 {
-    partial class tabPrincipal
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,24 +32,47 @@
             tabExpediciones = new TabPage();
             tlpExpediciones = new TableLayoutPanel();
             grpDatosExpedicion = new GroupBox();
-            comboBox1 = new ComboBox();
-            label5 = new Label();
-            label4 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            dataGridView1 = new DataGridView();
+            cboSumergible = new ComboBox();
+            cboZona = new ComboBox();
+            lblZona = new Label();
+            lblSumergible = new Label();
+            nudDuracion = new NumericUpDown();
+            lblDuracion = new Label();
+            dtpFechaSalida = new DateTimePicker();
+            lblFechaSalida = new Label();
+            txtNombre = new TextBox();
+            lblNombre = new Label();
+            flpAcciones = new FlowLayoutPanel();
+            btnNuevo = new Button();
+            btnGuardar = new Button();
+            btnEliminar = new Button();
+            btnRecargar = new Button();
+            lblModoRegistro = new Label();
+            dgvExpediciones = new DataGridView();
             tabInformes = new TabPage();
+            tlpInformes = new TableLayoutPanel();
+            flpBarraInformes = new FlowLayoutPanel();
+            cboConsulta = new ComboBox();
+            lblFechaDesde = new Label();
+            dtpFechaDesde = new DateTimePicker();
+            btnEjecutarInforme = new Button();
+            dgvResultados = new DataGridView();
+            label1 = new Label();
+            lblEstadoInforme = new Label();
+            lblEstadoConexionlbl = new StatusStrip();
+            lblEstadoConexion = new ToolStripStatusLabel();
             tabControl1.SuspendLayout();
             tabExpediciones.SuspendLayout();
             tlpExpediciones.SuspendLayout();
             grpDatosExpedicion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudDuracion).BeginInit();
+            flpAcciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExpediciones).BeginInit();
+            tabInformes.SuspendLayout();
+            tlpInformes.SuspendLayout();
+            flpBarraInformes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
+            lblEstadoConexionlbl.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -71,7 +94,7 @@
             tabExpediciones.Padding = new Padding(3);
             tabExpediciones.Size = new Size(976, 533);
             tabExpediciones.TabIndex = 0;
-            tabExpediciones.Text = "tabPage1";
+            tabExpediciones.Text = "Expediciones";
             tabExpediciones.UseVisualStyleBackColor = true;
             // 
             // tlpExpediciones
@@ -79,8 +102,8 @@
             tlpExpediciones.ColumnCount = 1;
             tlpExpediciones.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpExpediciones.Controls.Add(grpDatosExpedicion, 0, 0);
-            tlpExpediciones.Controls.Add(flowLayoutPanel1, 0, 1);
-            tlpExpediciones.Controls.Add(dataGridView1, 0, 2);
+            tlpExpediciones.Controls.Add(flpAcciones, 0, 1);
+            tlpExpediciones.Controls.Add(dgvExpediciones, 0, 2);
             tlpExpediciones.Dock = DockStyle.Fill;
             tlpExpediciones.Location = new Point(3, 3);
             tlpExpediciones.Name = "tlpExpediciones";
@@ -90,19 +113,19 @@
             tlpExpediciones.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             tlpExpediciones.Size = new Size(970, 527);
             tlpExpediciones.TabIndex = 0;
-            tlpExpediciones.Paint += tlpExpediciones_Paint;
             // 
             // grpDatosExpedicion
             // 
-            grpDatosExpedicion.Controls.Add(comboBox1);
-            grpDatosExpedicion.Controls.Add(label5);
-            grpDatosExpedicion.Controls.Add(label4);
-            grpDatosExpedicion.Controls.Add(numericUpDown1);
-            grpDatosExpedicion.Controls.Add(label3);
-            grpDatosExpedicion.Controls.Add(dateTimePicker1);
-            grpDatosExpedicion.Controls.Add(label2);
-            grpDatosExpedicion.Controls.Add(textBox1);
-            grpDatosExpedicion.Controls.Add(label1);
+            grpDatosExpedicion.Controls.Add(cboSumergible);
+            grpDatosExpedicion.Controls.Add(cboZona);
+            grpDatosExpedicion.Controls.Add(lblZona);
+            grpDatosExpedicion.Controls.Add(lblSumergible);
+            grpDatosExpedicion.Controls.Add(nudDuracion);
+            grpDatosExpedicion.Controls.Add(lblDuracion);
+            grpDatosExpedicion.Controls.Add(dtpFechaSalida);
+            grpDatosExpedicion.Controls.Add(lblFechaSalida);
+            grpDatosExpedicion.Controls.Add(txtNombre);
+            grpDatosExpedicion.Controls.Add(lblNombre);
             grpDatosExpedicion.Dock = DockStyle.Fill;
             grpDatosExpedicion.Location = new Point(3, 3);
             grpDatosExpedicion.Name = "grpDatosExpedicion";
@@ -111,113 +134,290 @@
             grpDatosExpedicion.TabStop = false;
             grpDatosExpedicion.Text = "Datos de la expedición ";
             // 
-            // comboBox1
+            // cboSumergible
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(547, 28);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 9;
+            cboSumergible.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboSumergible.FormattingEnabled = true;
+            cboSumergible.Location = new Point(557, 74);
+            cboSumergible.Name = "cboSumergible";
+            cboSumergible.Size = new Size(121, 23);
+            cboSumergible.TabIndex = 10;
             // 
-            // label5
+            // cboZona
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(501, 28);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 8;
-            label5.Text = "label5";
+            cboZona.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboZona.FormattingEnabled = true;
+            cboZona.Location = new Point(557, 23);
+            cboZona.Name = "cboZona";
+            cboZona.Size = new Size(121, 23);
+            cboZona.TabIndex = 9;
             // 
-            // label4
+            // lblZona
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(674, 31);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 6;
-            label4.Text = "label4";
+            lblZona.AutoSize = true;
+            lblZona.Location = new Point(478, 31);
+            lblZona.Name = "lblZona";
+            lblZona.Size = new Size(40, 15);
+            lblZona.TabIndex = 8;
+            lblZona.Text = "Zona: ";
             // 
-            // numericUpDown1
+            // lblSumergible
             // 
-            numericUpDown1.Location = new Point(161, 108);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 5;
+            lblSumergible.AutoSize = true;
+            lblSumergible.Location = new Point(478, 77);
+            lblSumergible.Name = "lblSumergible";
+            lblSumergible.Size = new Size(73, 15);
+            lblSumergible.TabIndex = 6;
+            lblSumergible.Text = "Sumergible: ";
             // 
-            // label3
+            // nudDuracion
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(69, 116);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 4;
-            label3.Text = "label3";
+            nudDuracion.Location = new Point(168, 108);
+            nudDuracion.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
+            nudDuracion.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudDuracion.Name = "nudDuracion";
+            nudDuracion.Size = new Size(120, 23);
+            nudDuracion.TabIndex = 5;
+            nudDuracion.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // dateTimePicker1
+            // lblDuracion
             // 
-            dateTimePicker1.Location = new Point(161, 75);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 3;
+            lblDuracion.AutoSize = true;
+            lblDuracion.Location = new Point(51, 116);
+            lblDuracion.Name = "lblDuracion";
+            lblDuracion.Size = new Size(101, 15);
+            lblDuracion.TabIndex = 4;
+            lblDuracion.Text = "Duración (horas): ";
             // 
-            // label2
+            // dtpFechaSalida
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(69, 75);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
+            dtpFechaSalida.Format = DateTimePickerFormat.Short;
+            dtpFechaSalida.Location = new Point(168, 71);
+            dtpFechaSalida.Name = "dtpFechaSalida";
+            dtpFechaSalida.Size = new Size(200, 23);
+            dtpFechaSalida.TabIndex = 3;
             // 
-            // textBox1
+            // lblFechaSalida
             // 
-            textBox1.Location = new Point(161, 28);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            lblFechaSalida.AutoSize = true;
+            lblFechaSalida.Location = new Point(51, 77);
+            lblFechaSalida.Name = "lblFechaSalida";
+            lblFechaSalida.Size = new Size(93, 15);
+            lblFechaSalida.TabIndex = 2;
+            lblFechaSalida.Text = "Fecha de salida: ";
             // 
-            // label1
+            // txtNombre
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(69, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            txtNombre.Location = new Point(168, 28);
+            txtNombre.MaxLength = 150;
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // lblNombre
             // 
-            flowLayoutPanel1.Location = new Point(3, 173);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(200, 44);
-            flowLayoutPanel1.TabIndex = 1;
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(51, 31);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(54, 15);
+            lblNombre.TabIndex = 0;
+            lblNombre.Text = "Nombre:";
             // 
-            // dataGridView1
+            // flpAcciones
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 223);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 2;
+            flpAcciones.Controls.Add(btnNuevo);
+            flpAcciones.Controls.Add(btnGuardar);
+            flpAcciones.Controls.Add(btnEliminar);
+            flpAcciones.Controls.Add(btnRecargar);
+            flpAcciones.Controls.Add(lblModoRegistro);
+            flpAcciones.Dock = DockStyle.Fill;
+            flpAcciones.Location = new Point(3, 173);
+            flpAcciones.Name = "flpAcciones";
+            flpAcciones.Size = new Size(964, 44);
+            flpAcciones.TabIndex = 1;
+            // 
+            // btnNuevo
+            // 
+            btnNuevo.Location = new Point(3, 3);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(122, 23);
+            btnNuevo.TabIndex = 0;
+            btnNuevo.Text = "Nuevo / Limpiar ";
+            btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(131, 3);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 1;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(212, 3);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 2;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnRecargar
+            // 
+            btnRecargar.Location = new Point(293, 3);
+            btnRecargar.Name = "btnRecargar";
+            btnRecargar.Size = new Size(75, 23);
+            btnRecargar.TabIndex = 3;
+            btnRecargar.Text = "Recargar";
+            btnRecargar.UseVisualStyleBackColor = true;
+            // 
+            // lblModoRegistro
+            // 
+            lblModoRegistro.AutoSize = true;
+            lblModoRegistro.Location = new Point(374, 0);
+            lblModoRegistro.Name = "lblModoRegistro";
+            lblModoRegistro.Size = new Size(141, 15);
+            lblModoRegistro.TabIndex = 4;
+            lblModoRegistro.Text = "Modo: nueva expedición ";
+            // 
+            // dgvExpediciones
+            // 
+            dgvExpediciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvExpediciones.Dock = DockStyle.Fill;
+            dgvExpediciones.Location = new Point(3, 223);
+            dgvExpediciones.Name = "dgvExpediciones";
+            dgvExpediciones.Size = new Size(964, 301);
+            dgvExpediciones.TabIndex = 2;
             // 
             // tabInformes
             // 
+            tabInformes.Controls.Add(tlpInformes);
             tabInformes.Location = new Point(4, 24);
             tabInformes.Name = "tabInformes";
             tabInformes.Padding = new Padding(3);
             tabInformes.Size = new Size(976, 533);
             tabInformes.TabIndex = 1;
-            tabInformes.Text = "tabPage2";
+            tabInformes.Text = "Consultas e informes";
             tabInformes.UseVisualStyleBackColor = true;
             // 
-            // tabPrincipal
+            // tlpInformes
+            // 
+            tlpInformes.ColumnCount = 1;
+            tlpInformes.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tlpInformes.Controls.Add(flpBarraInformes, 0, 0);
+            tlpInformes.Controls.Add(dgvResultados, 0, 1);
+            tlpInformes.Controls.Add(lblEstadoInforme, 0, 2);
+            tlpInformes.Dock = DockStyle.Fill;
+            tlpInformes.Location = new Point(3, 3);
+            tlpInformes.Name = "tlpInformes";
+            tlpInformes.RowCount = 3;
+            tlpInformes.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tlpInformes.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tlpInformes.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlpInformes.Size = new Size(970, 527);
+            tlpInformes.TabIndex = 0;
+            // 
+            // flpBarraInformes
+            // 
+            flpBarraInformes.Controls.Add(cboConsulta);
+            flpBarraInformes.Controls.Add(lblFechaDesde);
+            flpBarraInformes.Controls.Add(dtpFechaDesde);
+            flpBarraInformes.Controls.Add(btnEjecutarInforme);
+            flpBarraInformes.Controls.Add(label1);
+            flpBarraInformes.Dock = DockStyle.Fill;
+            flpBarraInformes.Location = new Point(3, 3);
+            flpBarraInformes.Name = "flpBarraInformes";
+            flpBarraInformes.Size = new Size(964, 74);
+            flpBarraInformes.TabIndex = 0;
+            // 
+            // cboConsulta
+            // 
+            cboConsulta.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboConsulta.FormattingEnabled = true;
+            cboConsulta.Location = new Point(3, 3);
+            cboConsulta.Name = "cboConsulta";
+            cboConsulta.Size = new Size(121, 23);
+            cboConsulta.TabIndex = 0;
+            // 
+            // lblFechaDesde
+            // 
+            lblFechaDesde.AutoSize = true;
+            lblFechaDesde.Location = new Point(130, 0);
+            lblFechaDesde.Name = "lblFechaDesde";
+            lblFechaDesde.Size = new Size(77, 15);
+            lblFechaDesde.TabIndex = 1;
+            lblFechaDesde.Text = "Desde fecha: ";
+            // 
+            // dtpFechaDesde
+            // 
+            dtpFechaDesde.Format = DateTimePickerFormat.Short;
+            dtpFechaDesde.Location = new Point(213, 3);
+            dtpFechaDesde.Name = "dtpFechaDesde";
+            dtpFechaDesde.Size = new Size(200, 23);
+            dtpFechaDesde.TabIndex = 2;
+            // 
+            // btnEjecutarInforme
+            // 
+            btnEjecutarInforme.Location = new Point(419, 3);
+            btnEjecutarInforme.Name = "btnEjecutarInforme";
+            btnEjecutarInforme.Size = new Size(75, 23);
+            btnEjecutarInforme.TabIndex = 3;
+            btnEjecutarInforme.Text = "Ejecutar consulta";
+            btnEjecutarInforme.UseVisualStyleBackColor = true;
+            // 
+            // dgvResultados
+            // 
+            dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvResultados.Dock = DockStyle.Fill;
+            dgvResultados.Location = new Point(3, 83);
+            dgvResultados.Name = "dgvResultados";
+            dgvResultados.Size = new Size(964, 411);
+            dgvResultados.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(500, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 4;
+            label1.Text = "label1";
+            // 
+            // lblEstadoInforme
+            // 
+            lblEstadoInforme.AutoSize = true;
+            lblEstadoInforme.Dock = DockStyle.Fill;
+            lblEstadoInforme.Location = new Point(3, 497);
+            lblEstadoInforme.Name = "lblEstadoInforme";
+            lblEstadoInforme.Size = new Size(964, 30);
+            lblEstadoInforme.TabIndex = 2;
+            lblEstadoInforme.Text = " Selecciona una consulta";
+            // 
+            // lblEstadoConexionlbl
+            // 
+            lblEstadoConexionlbl.Items.AddRange(new ToolStripItem[] { lblEstadoConexion });
+            lblEstadoConexionlbl.Location = new Point(0, 539);
+            lblEstadoConexionlbl.Name = "lblEstadoConexionlbl";
+            lblEstadoConexionlbl.Size = new Size(984, 22);
+            lblEstadoConexionlbl.TabIndex = 1;
+            lblEstadoConexionlbl.Text = "Sin conectar ";
+            // 
+            // lblEstadoConexion
+            // 
+            lblEstadoConexion.Name = "lblEstadoConexion";
+            lblEstadoConexion.Size = new Size(78, 17);
+            lblEstadoConexion.Text = " Sin conectar ";
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(984, 561);
+            Controls.Add(lblEstadoConexionlbl);
             Controls.Add(tabControl1);
             MinimumSize = new Size(1000, 600);
-            Name = "tabPrincipal";
+            Name = "MainForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Exploración submarina - Gestión de expediciones ";
             WindowState = FormWindowState.Maximized;
@@ -226,9 +426,20 @@
             tlpExpediciones.ResumeLayout(false);
             grpDatosExpedicion.ResumeLayout(false);
             grpDatosExpedicion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudDuracion).EndInit();
+            flpAcciones.ResumeLayout(false);
+            flpAcciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExpediciones).EndInit();
+            tabInformes.ResumeLayout(false);
+            tlpInformes.ResumeLayout(false);
+            tlpInformes.PerformLayout();
+            flpBarraInformes.ResumeLayout(false);
+            flpBarraInformes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResultados).EndInit();
+            lblEstadoConexionlbl.ResumeLayout(false);
+            lblEstadoConexionlbl.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -238,16 +449,33 @@
         private TabPage tabInformes;
         private TableLayoutPanel tlpExpediciones;
         private GroupBox grpDatosExpedicion;
-        private TextBox textBox1;
+        private TextBox txtNombre;
+        private Label lblNombre;
+        private FlowLayoutPanel flpAcciones;
+        private DataGridView dgvExpediciones;
+        private ComboBox cboZona;
+        private Label lblZona;
+        private Label lblSumergible;
+        private NumericUpDown nudDuracion;
+        private Label lblDuracion;
+        private DateTimePicker dtpFechaSalida;
+        private Label lblFechaSalida;
+        private ComboBox cboSumergible;
+        private Button btnNuevo;
+        private Button btnGuardar;
+        private Button btnEliminar;
+        private Button btnRecargar;
+        private Label lblModoRegistro;
+        private TableLayoutPanel tlpInformes;
+        private FlowLayoutPanel flpBarraInformes;
+        private ComboBox cboConsulta;
+        private Label lblFechaDesde;
+        private DateTimePicker dtpFechaDesde;
+        private Button btnEjecutarInforme;
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private DataGridView dataGridView1;
-        private ComboBox comboBox1;
-        private Label label5;
-        private Label label4;
-        private NumericUpDown numericUpDown1;
-        private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private Label label2;
+        private DataGridView dgvResultados;
+        private Label lblEstadoInforme;
+        private StatusStrip lblEstadoConexionlbl;
+        private ToolStripStatusLabel lblEstadoConexion;
     }
 }

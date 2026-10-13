@@ -1,0 +1,481 @@
+﻿namespace ExploracionSubmarinaApp.Forms
+{
+    partial class MainForm
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            tabControl1 = new TabControl();
+            tabExpediciones = new TabPage();
+            tlpExpediciones = new TableLayoutPanel();
+            grpDatosExpedicion = new GroupBox();
+            cboSumergible = new ComboBox();
+            cboZona = new ComboBox();
+            lblZona = new Label();
+            lblSumergible = new Label();
+            nudDuracion = new NumericUpDown();
+            lblDuracion = new Label();
+            dtpFechaSalida = new DateTimePicker();
+            lblFechaSalida = new Label();
+            txtNombre = new TextBox();
+            lblNombre = new Label();
+            flpAcciones = new FlowLayoutPanel();
+            btnNuevo = new Button();
+            btnGuardar = new Button();
+            btnEliminar = new Button();
+            btnRecargar = new Button();
+            lblModoRegistro = new Label();
+            dgvExpediciones = new DataGridView();
+            tabInformes = new TabPage();
+            tlpInformes = new TableLayoutPanel();
+            flpBarraInformes = new FlowLayoutPanel();
+            cboConsulta = new ComboBox();
+            lblFechaDesde = new Label();
+            dtpFechaDesde = new DateTimePicker();
+            btnEjecutarInforme = new Button();
+            dgvResultados = new DataGridView();
+            label1 = new Label();
+            lblEstadoInforme = new Label();
+            lblEstadoConexionlbl = new StatusStrip();
+            lblEstadoConexion = new ToolStripStatusLabel();
+            tabControl1.SuspendLayout();
+            tabExpediciones.SuspendLayout();
+            tlpExpediciones.SuspendLayout();
+            grpDatosExpedicion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudDuracion).BeginInit();
+            flpAcciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExpediciones).BeginInit();
+            tabInformes.SuspendLayout();
+            tlpInformes.SuspendLayout();
+            flpBarraInformes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
+            lblEstadoConexionlbl.SuspendLayout();
+            SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabExpediciones);
+            tabControl1.Controls.Add(tabInformes);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(984, 561);
+            tabControl1.TabIndex = 0;
+            // 
+            // tabExpediciones
+            // 
+            tabExpediciones.Controls.Add(tlpExpediciones);
+            tabExpediciones.Location = new Point(4, 24);
+            tabExpediciones.Name = "tabExpediciones";
+            tabExpediciones.Padding = new Padding(3);
+            tabExpediciones.Size = new Size(976, 533);
+            tabExpediciones.TabIndex = 0;
+            tabExpediciones.Text = "Expediciones";
+            tabExpediciones.UseVisualStyleBackColor = true;
+            // 
+            // tlpExpediciones
+            // 
+            tlpExpediciones.ColumnCount = 1;
+            tlpExpediciones.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tlpExpediciones.Controls.Add(grpDatosExpedicion, 0, 0);
+            tlpExpediciones.Controls.Add(flpAcciones, 0, 1);
+            tlpExpediciones.Controls.Add(dgvExpediciones, 0, 2);
+            tlpExpediciones.Dock = DockStyle.Fill;
+            tlpExpediciones.Location = new Point(3, 3);
+            tlpExpediciones.Name = "tlpExpediciones";
+            tlpExpediciones.RowCount = 3;
+            tlpExpediciones.RowStyles.Add(new RowStyle(SizeType.Absolute, 170F));
+            tlpExpediciones.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tlpExpediciones.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tlpExpediciones.Size = new Size(970, 527);
+            tlpExpediciones.TabIndex = 0;
+            // 
+            // grpDatosExpedicion
+            // 
+            grpDatosExpedicion.Controls.Add(cboSumergible);
+            grpDatosExpedicion.Controls.Add(cboZona);
+            grpDatosExpedicion.Controls.Add(lblZona);
+            grpDatosExpedicion.Controls.Add(lblSumergible);
+            grpDatosExpedicion.Controls.Add(nudDuracion);
+            grpDatosExpedicion.Controls.Add(lblDuracion);
+            grpDatosExpedicion.Controls.Add(dtpFechaSalida);
+            grpDatosExpedicion.Controls.Add(lblFechaSalida);
+            grpDatosExpedicion.Controls.Add(txtNombre);
+            grpDatosExpedicion.Controls.Add(lblNombre);
+            grpDatosExpedicion.Dock = DockStyle.Fill;
+            grpDatosExpedicion.Location = new Point(3, 3);
+            grpDatosExpedicion.Name = "grpDatosExpedicion";
+            grpDatosExpedicion.Size = new Size(964, 164);
+            grpDatosExpedicion.TabIndex = 0;
+            grpDatosExpedicion.TabStop = false;
+            grpDatosExpedicion.Text = "Datos de la expedición ";
+            // 
+            // cboSumergible
+            // 
+            cboSumergible.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboSumergible.FormattingEnabled = true;
+            cboSumergible.Location = new Point(557, 74);
+            cboSumergible.Name = "cboSumergible";
+            cboSumergible.Size = new Size(121, 23);
+            cboSumergible.TabIndex = 10;
+            // 
+            // cboZona
+            // 
+            cboZona.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboZona.FormattingEnabled = true;
+            cboZona.Location = new Point(557, 23);
+            cboZona.Name = "cboZona";
+            cboZona.Size = new Size(121, 23);
+            cboZona.TabIndex = 9;
+            // 
+            // lblZona
+            // 
+            lblZona.AutoSize = true;
+            lblZona.Location = new Point(478, 31);
+            lblZona.Name = "lblZona";
+            lblZona.Size = new Size(40, 15);
+            lblZona.TabIndex = 8;
+            lblZona.Text = "Zona: ";
+            // 
+            // lblSumergible
+            // 
+            lblSumergible.AutoSize = true;
+            lblSumergible.Location = new Point(478, 77);
+            lblSumergible.Name = "lblSumergible";
+            lblSumergible.Size = new Size(73, 15);
+            lblSumergible.TabIndex = 6;
+            lblSumergible.Text = "Sumergible: ";
+            // 
+            // nudDuracion
+            // 
+            nudDuracion.Location = new Point(168, 108);
+            nudDuracion.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
+            nudDuracion.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudDuracion.Name = "nudDuracion";
+            nudDuracion.Size = new Size(120, 23);
+            nudDuracion.TabIndex = 5;
+            nudDuracion.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // lblDuracion
+            // 
+            lblDuracion.AutoSize = true;
+            lblDuracion.Location = new Point(51, 116);
+            lblDuracion.Name = "lblDuracion";
+            lblDuracion.Size = new Size(101, 15);
+            lblDuracion.TabIndex = 4;
+            lblDuracion.Text = "Duración (horas): ";
+            // 
+            // dtpFechaSalida
+            // 
+            dtpFechaSalida.Format = DateTimePickerFormat.Short;
+            dtpFechaSalida.Location = new Point(168, 71);
+            dtpFechaSalida.Name = "dtpFechaSalida";
+            dtpFechaSalida.Size = new Size(200, 23);
+            dtpFechaSalida.TabIndex = 3;
+            // 
+            // lblFechaSalida
+            // 
+            lblFechaSalida.AutoSize = true;
+            lblFechaSalida.Location = new Point(51, 77);
+            lblFechaSalida.Name = "lblFechaSalida";
+            lblFechaSalida.Size = new Size(93, 15);
+            lblFechaSalida.TabIndex = 2;
+            lblFechaSalida.Text = "Fecha de salida: ";
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(168, 28);
+            txtNombre.MaxLength = 150;
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 1;
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(51, 31);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(54, 15);
+            lblNombre.TabIndex = 0;
+            lblNombre.Text = "Nombre:";
+            // 
+            // flpAcciones
+            // 
+            flpAcciones.Controls.Add(btnNuevo);
+            flpAcciones.Controls.Add(btnGuardar);
+            flpAcciones.Controls.Add(btnEliminar);
+            flpAcciones.Controls.Add(btnRecargar);
+            flpAcciones.Controls.Add(lblModoRegistro);
+            flpAcciones.Dock = DockStyle.Fill;
+            flpAcciones.Location = new Point(3, 173);
+            flpAcciones.Name = "flpAcciones";
+            flpAcciones.Size = new Size(964, 44);
+            flpAcciones.TabIndex = 1;
+            // 
+            // btnNuevo
+            // 
+            btnNuevo.Location = new Point(3, 3);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(122, 23);
+            btnNuevo.TabIndex = 0;
+            btnNuevo.Text = "Nuevo / Limpiar ";
+            btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(131, 3);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 1;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(212, 3);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 2;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnRecargar
+            // 
+            btnRecargar.Location = new Point(293, 3);
+            btnRecargar.Name = "btnRecargar";
+            btnRecargar.Size = new Size(75, 23);
+            btnRecargar.TabIndex = 3;
+            btnRecargar.Text = "Recargar";
+            btnRecargar.UseVisualStyleBackColor = true;
+            // 
+            // lblModoRegistro
+            // 
+            lblModoRegistro.AutoSize = true;
+            lblModoRegistro.Location = new Point(374, 0);
+            lblModoRegistro.Name = "lblModoRegistro";
+            lblModoRegistro.Size = new Size(141, 15);
+            lblModoRegistro.TabIndex = 4;
+            lblModoRegistro.Text = "Modo: nueva expedición ";
+            // 
+            // dgvExpediciones
+            // 
+            dgvExpediciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvExpediciones.Dock = DockStyle.Fill;
+            dgvExpediciones.Location = new Point(3, 223);
+            dgvExpediciones.Name = "dgvExpediciones";
+            dgvExpediciones.Size = new Size(964, 301);
+            dgvExpediciones.TabIndex = 2;
+            // 
+            // tabInformes
+            // 
+            tabInformes.Controls.Add(tlpInformes);
+            tabInformes.Location = new Point(4, 24);
+            tabInformes.Name = "tabInformes";
+            tabInformes.Padding = new Padding(3);
+            tabInformes.Size = new Size(976, 533);
+            tabInformes.TabIndex = 1;
+            tabInformes.Text = "Consultas e informes";
+            tabInformes.UseVisualStyleBackColor = true;
+            // 
+            // tlpInformes
+            // 
+            tlpInformes.ColumnCount = 1;
+            tlpInformes.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tlpInformes.Controls.Add(flpBarraInformes, 0, 0);
+            tlpInformes.Controls.Add(dgvResultados, 0, 1);
+            tlpInformes.Controls.Add(lblEstadoInforme, 0, 2);
+            tlpInformes.Dock = DockStyle.Fill;
+            tlpInformes.Location = new Point(3, 3);
+            tlpInformes.Name = "tlpInformes";
+            tlpInformes.RowCount = 3;
+            tlpInformes.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tlpInformes.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tlpInformes.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlpInformes.Size = new Size(970, 527);
+            tlpInformes.TabIndex = 0;
+            // 
+            // flpBarraInformes
+            // 
+            flpBarraInformes.Controls.Add(cboConsulta);
+            flpBarraInformes.Controls.Add(lblFechaDesde);
+            flpBarraInformes.Controls.Add(dtpFechaDesde);
+            flpBarraInformes.Controls.Add(btnEjecutarInforme);
+            flpBarraInformes.Controls.Add(label1);
+            flpBarraInformes.Dock = DockStyle.Fill;
+            flpBarraInformes.Location = new Point(3, 3);
+            flpBarraInformes.Name = "flpBarraInformes";
+            flpBarraInformes.Size = new Size(964, 74);
+            flpBarraInformes.TabIndex = 0;
+            // 
+            // cboConsulta
+            // 
+            cboConsulta.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboConsulta.FormattingEnabled = true;
+            cboConsulta.Location = new Point(3, 3);
+            cboConsulta.Name = "cboConsulta";
+            cboConsulta.Size = new Size(121, 23);
+            cboConsulta.TabIndex = 0;
+            // 
+            // lblFechaDesde
+            // 
+            lblFechaDesde.AutoSize = true;
+            lblFechaDesde.Location = new Point(130, 0);
+            lblFechaDesde.Name = "lblFechaDesde";
+            lblFechaDesde.Size = new Size(77, 15);
+            lblFechaDesde.TabIndex = 1;
+            lblFechaDesde.Text = "Desde fecha: ";
+            // 
+            // dtpFechaDesde
+            // 
+            dtpFechaDesde.Format = DateTimePickerFormat.Short;
+            dtpFechaDesde.Location = new Point(213, 3);
+            dtpFechaDesde.Name = "dtpFechaDesde";
+            dtpFechaDesde.Size = new Size(200, 23);
+            dtpFechaDesde.TabIndex = 2;
+            // 
+            // btnEjecutarInforme
+            // 
+            btnEjecutarInforme.Location = new Point(419, 3);
+            btnEjecutarInforme.Name = "btnEjecutarInforme";
+            btnEjecutarInforme.Size = new Size(75, 23);
+            btnEjecutarInforme.TabIndex = 3;
+            btnEjecutarInforme.Text = "Ejecutar consulta";
+            btnEjecutarInforme.UseVisualStyleBackColor = true;
+            // 
+            // dgvResultados
+            // 
+            dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvResultados.Dock = DockStyle.Fill;
+            dgvResultados.Location = new Point(3, 83);
+            dgvResultados.Name = "dgvResultados";
+            dgvResultados.Size = new Size(964, 411);
+            dgvResultados.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(500, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 4;
+            label1.Text = "label1";
+            // 
+            // lblEstadoInforme
+            // 
+            lblEstadoInforme.AutoSize = true;
+            lblEstadoInforme.Dock = DockStyle.Fill;
+            lblEstadoInforme.Location = new Point(3, 497);
+            lblEstadoInforme.Name = "lblEstadoInforme";
+            lblEstadoInforme.Size = new Size(964, 30);
+            lblEstadoInforme.TabIndex = 2;
+            lblEstadoInforme.Text = " Selecciona una consulta";
+            // 
+            // lblEstadoConexionlbl
+            // 
+            lblEstadoConexionlbl.Items.AddRange(new ToolStripItem[] { lblEstadoConexion });
+            lblEstadoConexionlbl.Location = new Point(0, 539);
+            lblEstadoConexionlbl.Name = "lblEstadoConexionlbl";
+            lblEstadoConexionlbl.Size = new Size(984, 22);
+            lblEstadoConexionlbl.TabIndex = 1;
+            lblEstadoConexionlbl.Text = "Sin conectar ";
+            // 
+            // lblEstadoConexion
+            // 
+            lblEstadoConexion.Name = "lblEstadoConexion";
+            lblEstadoConexion.Size = new Size(78, 17);
+            lblEstadoConexion.Text = " Sin conectar ";
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(984, 561);
+            Controls.Add(lblEstadoConexionlbl);
+            Controls.Add(tabControl1);
+            MinimumSize = new Size(1000, 600);
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Exploración submarina - Gestión de expediciones ";
+            WindowState = FormWindowState.Maximized;
+            tabControl1.ResumeLayout(false);
+            tabExpediciones.ResumeLayout(false);
+            tlpExpediciones.ResumeLayout(false);
+            grpDatosExpedicion.ResumeLayout(false);
+            grpDatosExpedicion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudDuracion).EndInit();
+            flpAcciones.ResumeLayout(false);
+            flpAcciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvExpediciones).EndInit();
+            tabInformes.ResumeLayout(false);
+            tlpInformes.ResumeLayout(false);
+            tlpInformes.PerformLayout();
+            flpBarraInformes.ResumeLayout(false);
+            flpBarraInformes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResultados).EndInit();
+            lblEstadoConexionlbl.ResumeLayout(false);
+            lblEstadoConexionlbl.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private TabControl tabControl1;
+        private TabPage tabExpediciones;
+        private TabPage tabInformes;
+        private TableLayoutPanel tlpExpediciones;
+        private GroupBox grpDatosExpedicion;
+        private TextBox txtNombre;
+        private Label lblNombre;
+        private FlowLayoutPanel flpAcciones;
+        private DataGridView dgvExpediciones;
+        private ComboBox cboZona;
+        private Label lblZona;
+        private Label lblSumergible;
+        private NumericUpDown nudDuracion;
+        private Label lblDuracion;
+        private DateTimePicker dtpFechaSalida;
+        private Label lblFechaSalida;
+        private ComboBox cboSumergible;
+        private Button btnNuevo;
+        private Button btnGuardar;
+        private Button btnEliminar;
+        private Button btnRecargar;
+        private Label lblModoRegistro;
+        private TableLayoutPanel tlpInformes;
+        private FlowLayoutPanel flpBarraInformes;
+        private ComboBox cboConsulta;
+        private Label lblFechaDesde;
+        private DateTimePicker dtpFechaDesde;
+        private Button btnEjecutarInforme;
+        private Label label1;
+        private DataGridView dgvResultados;
+        private Label lblEstadoInforme;
+        private StatusStrip lblEstadoConexionlbl;
+        private ToolStripStatusLabel lblEstadoConexion;
+    }
+}
